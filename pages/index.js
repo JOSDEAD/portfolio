@@ -2,8 +2,9 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import NavBar from '../components/navbar'
 import styled from 'styled-components'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import SectionContext from '../context/sectionContext'
+import { useInView } from "react-intersection-observer";
 
 
 const Section = styled.div`
@@ -13,7 +14,17 @@ const Section = styled.div`
 `
 
 export default function Home() {
-  const {setRef} = useContext(SectionContext);
+const [selected,setSelected] = useState();
+  const [section1Ref, section1InView,entry1] = useInView({ threshold: 0.5 });
+  const [section2Ref, section2InView,entry2] = useInView({ threshold: 0.5 });
+  const [section3Ref, section3InView,entry3] = useInView({ threshold: 0.5 });
+  const [section4Ref, section4InView,entry4] = useInView({ threshold: 0.5 });
+  useEffect(()=>{
+    section1InView && setSelected(entry1.target.id)
+    section2InView && setSelected(entry2.target.id)
+    section3InView && setSelected(entry3.target.id)
+    section4InView && setSelected(entry4.target.id)
+  },[entry1, entry2, entry3, entry4, section1InView, section2InView, section3InView, section4InView])
   return (
     <div className={styles.container}>
       <Head>
@@ -22,18 +33,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <NavBar/>
+        <NavBar selected={selected}/>
       <main className={styles.main}>
-      <Section id='home' color='beige' ref={setRef('home')}>
+      <Section id='home' color='beige' ref={section1Ref}>
           <h1>Home</h1>
       </Section>
-      <Section id='projects' color='gray' ref={setRef('Projects')}>
+      <Section id='projects' color='gray' ref={section2Ref}>
           <h1>Projects</h1>
       </Section>
-      <Section id='resume' color='blue' ref={setRef('Resume')}>
+      <Section id='resume' color='blue' ref={section3Ref}>
           <h1>Resume</h1>
       </Section>
-      <Section id='contact' color='green' ref={setRef('Contact')}>
+      <Section id='contact' color='green' ref={section4Ref}>
           <h1>Contact</h1>
       </Section>
      </main>

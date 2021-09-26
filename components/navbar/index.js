@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { routes } from "../../routes";
 import Link from "next/link";
-import { useEffect, useRef, createRef } from "react";
-import useDynamicRefs from 'use-dynamic-refs';
+
 const StyledNavDiv = styled.nav`
   display: flex;
   flex-direction: column;
@@ -19,25 +18,43 @@ const StyledNavDiv = styled.nav`
 const StyledRoutedLink = styled.a`
   transform: rotate(-90deg);
   width: fit-content;
+  padding: 4px 12px 6px;
+  padding-top: 8px;
+  color: gray;
 `;
 
-const Navbar = () => {
-  const [getRef, setRef] =  useDynamicRefs();
-  useEffect(()=>{
-    const id1 = getRef('home');
-    console.log('Home', id1)
-},[])
+const StyledActive = styled.a`
+  color: black;
+  border-radius: 820px;
+  padding: 4px 12px 6px;
+  padding-top: 8px;
+  border: 3px solid;
+  width: fit-content;
+  transform: rotate(-90deg);
+  line-height: 1.8em;
+  font-weight: 400;
+`;
+
+const Navbar = ({ selected }) => {
+  console.log(selected);
   return (
-    <StyledNavDiv>
-      {routes.map((route) => {
-          console.log(route.text);
-        return (
-          <Link href={route.link} key={route.id} passHref>
-            <StyledRoutedLink ref={setRef(route.text)}>{route.text}</StyledRoutedLink>
-          </Link>
-        );
-      })}
-    </StyledNavDiv>
+    <>
+      {selected !== 'home' && (
+        <StyledNavDiv>
+          {routes.map((route) => {
+            return (
+              <Link href={route.link} key={route.id} passHref>
+                {selected === route.id ? (
+                  <StyledActive>{route.text}</StyledActive>
+                ) : (
+                  <StyledRoutedLink>{route.text}</StyledRoutedLink>
+                )}
+              </Link>
+            );
+          })}
+        </StyledNavDiv>
+      )}
+    </>
   );
 };
 

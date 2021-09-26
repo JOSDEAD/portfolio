@@ -1,22 +1,22 @@
 export const routes = [
     {
-        id:1,
+        id:'home',
         text: 'Home',
         link : '#home'
     },
     {
-        id:2,
+        id:'projects',
         text: 'Projects',
         link : '#projects'
     },
         {
-        id:3,
+        id:'resume',
         text: 'Resume',
         link : '#resume'
     },
         {
-        id:4,
-        text: 'Contact Me',
+        id:'contact',
+        text: 'Contact',
         link : '#contact'
     }
 ]
