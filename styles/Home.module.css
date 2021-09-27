@@ -12,6 +12,12 @@
   justify-content: center;
   width: 100%;
   align-items: center;
+  margin-left: 5rem;
 }
 
 
+@media (max-width: 600px) {
+  .main{
+    margin-left:0;
+  }
+}

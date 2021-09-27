@@ -2,10 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import NavBar from '../components/navbar'
 import styled from 'styled-components'
-import { useContext, useEffect, useState } from 'react'
-import SectionContext from '../context/sectionContext'
+import { useEffect, useState } from 'react'
 import { useInView } from "react-intersection-observer";
-
+import Presentation from './home'
+import LanguageSelector from '../components/languageSelector'
 
 const Section = styled.div`
       background-color: ${props => props.color};
@@ -35,9 +35,10 @@ const [selected,setSelected] = useState();
 
         <NavBar selected={selected}/>
       <main className={styles.main}>
-      <Section id='home' color='beige' ref={section1Ref}>
+        <LanguageSelector/>
+      <Presentation color='beige' ref={section1Ref} setSelected={setSelected}>
           <h1>Home</h1>
-      </Section>
+      </Presentation>
       <Section id='projects' color='gray' ref={section2Ref}>
           <h1>Projects</h1>
       </Section>

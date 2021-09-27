@@ -1,13 +1,8 @@
 import "../styles/globals.css";
-import SectionContext from "../context/sectionContext";
-import useDynamicRefs from 'use-dynamic-refs';
-
+import '../i18n/i18n'
 function MyApp({ Component, pageProps }) {
-  const [getRef,setRef] = useDynamicRefs();
-  return (
-    <SectionContext.Provider value={{setRef,getRef}}>
+  return(
       <Component {...pageProps}/>
-    </SectionContext.Provider>
   );
 }
 
