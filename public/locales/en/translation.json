@@ -1,5 +1,24 @@
 {
+    "nav":{
+        "home":"Home",
+        "projects":"Projects",
+        "resume":"Résumé",
+        "contacs":"contact"
+    },
     "greeting": "Hi, I'm Jose",
     "front-end-developer" : "a Front End Developer based in CR",
-    "profile-description" : "Front end developer with three years of experience who is comfortable working with React, Redux, Rest to develop all aspects of the user interface. Passionate about new technologies and building cool stuff. "
+    "profile-description" : "Front end developer with three years of experience who is comfortable working with React, Redux, Rest to develop all aspects of the user interface. Passionate about new technologies and building cool stuff.",
+    "video-chat-js" : "Built with react and WebRTC",
+    "simple-clock-js": "Built with Vanilla JS and CSS",
+    "instagram": "TailwindCSS, React, Redux and Firebase",
+    "ip-tracker": "gives you information about an IP and it's location.",
+    "who-am-i-title": "Who am I?",
+    "who-am-i-text": "I'm a Software engineer based in CR who enjoys of web development,I like all of the stack but especially Front-End, I have a B.A. in Computer Science and over 3 year of expericience as a developer.",
+    "who-am-i-name": "My name is",
+    "what-can-i-do-text" : "I create dinamyc and responsive web applicantions using React, with a background in Full-Stack web development I understand how a web application should be structure and I'm able to build solutions to any problem. I'm at the vanguard of any new technoligy of web design and I can adapt to any of them.",
+    "what-can-i-do-title": "What can I do?",
+    "passionate":"Passionate about",
+    "passionate-text1": "As a React enthusiast, I'm always looking for the next project to work on, I believe it's possible to built everything you can imagine if you give the neccesary time to it.",
+    "passionate-text2" : "Seeking for every new interesting technoligy that's out there, I can say that i'm passionate for how web development has evolve over the years. Today it's the time to built the impossible.",
+    "passionate-text3" : "I love working with people that want to make the world a better place :D."
 }

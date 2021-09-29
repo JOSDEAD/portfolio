@@ -1,5 +1,24 @@
 {
-    "greeting": "Salut, je suis José",
+    "nav":{
+        "home":"Home",
+        "projects":"Projets",
+        "resume":"Résumé",
+        "contacs":"contact"
+    },
+    "greeting": "Hi, j'suis Jose",
     "front-end-developer" : "un Développeur Front End basé en CR",
-    "profile-description" : "Développeur front-end avec trois ans d'expérience qui est à l'aise avec React, Redux, Rest pour développer tous les aspects de l'interface utilisateur. Passionné par les nouvelles technologies et la création de trucs sympas. "
+    "profile-description" : "Développeur front-end avec trois ans d'expérience qui est à l'aise avec React, Redux, Rest pour développer tous les aspects de l'interface utilisateur. Passionné par les nouvelles technologies et la création de trucs sympas. ",
+    "video-chat-js" : "Développé avec React et WebRTC",
+    "simple-clock-js": "Développé avec Vanilla JS et CSS",
+    "instagram": "TailwindCSS, React, Redux et Firebase",
+    "ip-tracker":"vous donne des informations sur une adresse IP et son emplacement.",
+    "who-am-i-title": "Qui suis je?",
+    "who-am-i-text": "je suis un ingénieur logiciel basé en CR qui aime le développement Web, j'aime toute la pile mais surtout le Front-End, j'ai un B.A. en informatique et plus de 3 ans d'expérience en tant que développeur.",
+    "who-am-i-name": "Je m'appelle",
+    "what-can-i-do-text":"Je crée des candidatures Web dynamiques et réactives à l'aide de React, avec une formation en développement Web Full-Stack, je comprends comment une application Web doit être structurée et je suis capable de créer des solutions à n'importe quel problème. Je suis à l'avant-garde de toute nouvelle technologie de conception de sites Web et je peux m'adapter à n'importe laquelle d'entre elles.",
+    "what-can-i-do-title":"Que puis-je faire?",
+    "passionate": "Passionné par",
+     "passionate-text1": "En tant que passionné de React, je suis toujours à la recherche du prochain projet sur lequel travailler, je pense qu'il est possible de construire tout ce que vous pouvez imaginer si vous y donnez le temps nécessaire.",
+     "passionate-text2": "À la recherche de toutes les nouvelles technologies intéressantes qui existent, je peux dire que je suis passionné par l'évolution du développement Web au fil des ans. Aujourd'hui, il est temps de construire l'impossible.",
+     "passionate-text3": "J'adore travailler avec des gens qui veulent rendre le monde meilleur :D."
 }

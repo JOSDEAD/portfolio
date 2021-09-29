@@ -5,8 +5,9 @@ import styled from 'styled-components'
 import { useEffect, useState } from 'react'
 import { useInView } from "react-intersection-observer";
 import Presentation from './home'
-import LanguageSelector from '../components/languageSelector'
-
+import Header from '../components/header'
+;import Projects from './projects'
+import About from './about'
 const Section = styled.div`
       background-color: ${props => props.color};
       height: 100vh;
@@ -31,17 +32,13 @@ const [selected,setSelected] = useState();
         <title>Jose Miguel</title>
         <meta name="description" content="Jose's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"></link>
       </Head>
-
         <NavBar selected={selected}/>
       <main className={styles.main}>
-        <LanguageSelector/>
-      <Presentation color='beige' ref={section1Ref} setSelected={setSelected}>
-          <h1>Home</h1>
-      </Presentation>
-      <Section id='projects' color='gray' ref={section2Ref}>
-          <h1>Projects</h1>
-      </Section>
+      <Presentation  setSelected={setSelected}/>
+      <Projects setSelected={setSelected}/>
+      <About setSelected={setSelected}/>
       <Section id='resume' color='blue' ref={section3Ref}>
           <h1>Resume</h1>
       </Section>

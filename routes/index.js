@@ -1,4 +1,4 @@
-export const routes = [
+const routes = [
     {
         id:'home',
         text: 'Home',
@@ -9,7 +9,12 @@ export const routes = [
         text: 'Projects',
         link : '#projects'
     },
-        {
+    {
+        id:'about',
+        text: 'About  ',
+        link : '#about'
+    },
+    {
         id:'resume',
         text: 'Resume',
         link : '#resume'
@@ -20,3 +25,5 @@ export const routes = [
         link : '#contact'
     }
 ]
+
+export default routes
